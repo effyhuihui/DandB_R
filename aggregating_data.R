@@ -18,6 +18,11 @@ fem <- subset(titanic, titanic$sex == 'female')
 
 table(fem$pclass, fem$survived)
 
+
+## two very useful resources to differentiate apply family:
+## http://stackoverflow.com/questions/3505701/r-grouping-functions-sapply-vs-lapply-vs-apply-vs-tapply-vs-by-vs-aggrega
+##http://stackoverflow.com/questions/2392216/why-is-as-factor-returns-a-character-when-used-inside-apply
+
 ##tapply
 tapply(fem$fare, fem$survived, mean)
 
@@ -57,8 +62,6 @@ apply(titanic,1,check.NA) #rows
 apply(titanic,2,check.NA) #columns
 
 #lapply
-## a very useful example about "what's the difference between apply and lapply"
-http://stackoverflow.com/questions/2392216/why-is-as-factor-returns-a-character-when-used-inside-apply
 ?lapply
 str(titanic)
 titanic[c(1,4,6:7,11)] <- lapply(titanic[c(1,4,6:7,11)], as.factor)
