@@ -26,6 +26,10 @@ titanic1 <- read.table(file='titanic.txt',
                       as.is=TRUE,
                       sep='\t')
 
+
+rm(dataname) # it will temperarily removed 
+gc() # tell you the memory usage
+
 ####################
 #database connection
 ####################
