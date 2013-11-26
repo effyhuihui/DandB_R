@@ -33,7 +33,18 @@ tapply(titanic$age,titanic$pclass,mean,na.rm=T) #tells R to exclude missing valu
 
 
 ##aggregate
-aggregate(age~pclass+sex,FUN=mean,data=titanic) 
+## Formulas, one ~ one, one ~ many, many ~ one, and many ~ many:
+
+> aggregate(Age~Pclass+Sex, FUN=mean,data=titanic)
+  Pclass    Sex      Age
+1      1 female 34.61176
+2      2 female 28.72297
+3      3 female 21.75000
+4      1   male 41.28139
+5      2   male 30.74071
+6      3   male 26.50759
+
+
 
 ##ddply
 library(plyr)
